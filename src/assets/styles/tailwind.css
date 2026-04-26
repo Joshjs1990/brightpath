@@ -52,9 +52,6 @@
   .bg-page {
     background-color: var(--aw-color-bg-page);
   }
-  .bg-dark {
-    background-color: var(--aw-color-bg-page-dark);
-  }
   .bg-light {
     background-color: var(--aw-color-bg-page);
   }
@@ -142,22 +139,37 @@
   }
 
   .btn-tertiary {
-    @apply btn border-none shadow-none text-muted hover:text-gray-900 dark:text-gray-400 dark:hover:text-white;
+    @apply btn border-none shadow-none text-muted hover:text-white;
   }
 }
 
+#header {
+  color: #f4efe4;
+  z-index: 80;
+  background: transparent;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    backdrop-filter 180ms ease;
+}
+
+#header > div:first-child {
+  background: transparent;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    backdrop-filter 180ms ease;
+}
+
+#header.scroll,
 #header.scroll > div:first-child {
-  background: rgb(9 9 8 / 0.88);
+  background: rgb(9 9 8 / 0.9);
+  -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid rgb(244 239 228 / 0.12);
   box-shadow: none;
 }
-.dark #header.scroll > div:first-child,
-#header.scroll.dark > div:first-child {
-  background: rgb(9 9 8 / 0.88);
-  border-bottom: 1px solid rgb(244 239 228 / 0.12);
-  box-shadow: none;
-}
+
 /* #header.scroll > div:last-child {
   @apply py-3;
 } */
@@ -185,6 +197,15 @@
   transition: color 180ms ease;
 }
 
+.site-footer .brand-lockup {
+  color: #f4efe4;
+}
+
+.site-footer .brand-mark {
+  color: #ff3b1f;
+  filter: drop-shadow(0 0 18px rgb(255 59 31 / 0.45));
+}
+
 .brand-mark {
   width: 2.55rem;
   height: 2.55rem;
@@ -204,20 +225,6 @@
   line-height: 0.92;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-}
-
-#header {
-  color: #f4efe4;
-}
-
-#header > div:first-child {
-  background: rgb(9 9 8 / 0.96);
-}
-
-@media (min-width: 768px) {
-  #header > div:first-child {
-    background: transparent;
-  }
 }
 
 #header.scroll .brand-lockup,
@@ -248,12 +255,18 @@
 
 @media (max-width: 767px) {
   #header {
-    background: #090908;
-    border-bottom-color: rgb(244 239 228 / 0.12);
+    background: #090908 !important;
+    border-bottom: 1px solid rgb(244 239 228 / 0.12);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    padding-top: env(safe-area-inset-top);
   }
 
+  #header > div:first-child,
   #header > .relative {
-    background: #090908;
+    background: #090908 !important;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
   }
 
   #header .brand-lockup {
@@ -574,23 +587,20 @@ section.relative.md\:-mt-\[76px\] img {
 }
 
 .text-heading,
-.dark .dark\:text-white,
-.dark .dark\:text-gray-200 {
+.text-white {
   color: #f4efe4;
 }
 
-.dark .dark\:text-slate-300,
-.dark .dark\:text-slate-400,
 .text-muted {
   color: rgb(244 239 228 / 0.62);
 }
 
-.dark .dark\:hover\:text-white:hover {
+.hover\:text-white:hover {
   color: #ffffff !important;
 }
 
 .hover\:bg-gray-100:hover,
-.dark .dark\:hover\:bg-gray-700:hover {
+.hover\:bg-white\/10:hover {
   background-color: rgb(244 239 228 / 0.1) !important;
 }
 
@@ -641,7 +651,7 @@ section.relative.md\:-mt-\[76px\] img {
 .grid .rounded-lg,
 .rounded-lg.backdrop-blur,
 .shadow-\[0_4px_30px_rgba\(0\2c 0\2c 0\2c 0\.1\)\],
-.dark .dark\:bg-slate-900 {
+.bg-white {
   background: rgb(244 239 228 / 0.035) !important;
   border: 1px solid rgb(244 239 228 / 0.14) !important;
 }
