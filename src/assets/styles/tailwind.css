@@ -210,6 +210,16 @@
   color: #f4efe4;
 }
 
+#header > div:first-child {
+  background: rgb(9 9 8 / 0.96);
+}
+
+@media (min-width: 768px) {
+  #header > div:first-child {
+    background: transparent;
+  }
+}
+
 #header.scroll .brand-lockup,
 #header.expanded .brand-lockup {
   color: #f4efe4;
@@ -234,6 +244,30 @@
 #header .btn,
 #header .btn-primary {
   padding-block: 0.75rem;
+}
+
+@media (max-width: 767px) {
+  #header {
+    background: #090908;
+    border-bottom-color: rgb(244 239 228 / 0.12);
+  }
+
+  #header > .relative {
+    background: #090908;
+  }
+
+  #header .brand-lockup {
+    color: #f4efe4;
+  }
+
+  #header .brand-mark {
+    color: #ff3b1f;
+    filter: drop-shadow(0 0 18px rgb(255 59 31 / 0.45));
+  }
+
+  [data-aw-toggle-menu] span:not(.sr-only) {
+    background-color: #ffffff !important;
+  }
 }
 
 section {
