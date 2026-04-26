@@ -278,6 +278,19 @@
     filter: drop-shadow(0 0 18px rgb(255 59 31 / 0.45));
   }
 
+  #header.expanded nav,
+  #header.expanded nav a,
+  #header.expanded nav button,
+  #header nav,
+  #header nav a,
+  #header nav button {
+    color: #f4efe4 !important;
+  }
+
+  #header.expanded nav {
+    background: #090908;
+  }
+
   [data-aw-toggle-menu] span:not(.sr-only) {
     background-color: #ffffff !important;
   }
