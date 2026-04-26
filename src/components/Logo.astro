@@ -2,8 +2,13 @@
 import { SITE } from 'astrowind:config';
 ---
 
-<span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
->
-  🚀 {SITE?.name}
+<span class="brand-lockup" aria-label={SITE?.name}>
+  <svg class="brand-mark" viewBox="0 0 120 120" aria-hidden="true">
+    <path d="M16 12h68v18H34v60h18V48h48v18H70v42H16z" />
+    <path d="M88 12h16v96H88z" />
+  </svg>
+  <span class="brand-wordmark">
+    <span>BrightPath</span>
+    <span>Marketing</span>
+  </span>
 </span>

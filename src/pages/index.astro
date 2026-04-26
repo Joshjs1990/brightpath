@@ -7,393 +7,272 @@ import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'BrightPath Marketing - Strategy and growth consulting for B2B service firms',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
   <Hero
+    id="home-hero"
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
+        text: 'Book a strategy call',
+        href: '/contact',
+        icon: 'tabler:calendar-check',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: 'View services', href: '#services' },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+    bg={`<div class="bp-hero-signal-bg" aria-hidden="true">
+      <div class="bp-signal-visual" role="presentation">
+        <span class="bp-signal-grid"></span>
+        <span class="bp-signal-core"></span>
+        <span class="bp-signal-line bp-signal-line-a"></span>
+        <span class="bp-signal-line bp-signal-line-b"></span>
+        <span class="bp-signal-line bp-signal-line-c"></span>
+        <span class="bp-signal-node bp-signal-node-a"></span>
+        <span class="bp-signal-node bp-signal-node-b"></span>
+        <span class="bp-signal-node bp-signal-node-c"></span>
+        <span class="bp-signal-label">MARKET SIGNAL / DEMAND SYSTEM</span>
+      </div>
+    </div>`}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white"> Astro 5.0</span> + Tailwind CSS
+      Marketing strategy that turns expertise into <span class="text-accent dark:text-white">qualified demand</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 5.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
+      BrightPath Marketing helps consultants, agencies, and B2B service firms clarify their offer, sharpen their
+      messaging, and build practical campaigns that create better conversations with the right buyers.
     </Fragment>
   </Hero>
 
-  <!-- Note Widget ******************* -->
-
-  <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" />
-
-  <!-- Features Widget *************** -->
+  <Note
+    title="Built for owner-led teams:"
+    description="Clear positioning, useful content, better conversion paths, and a realistic plan your team can actually run."
+  />
 
   <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023 and 2024."
+    id="services"
+    tagline="Consulting services"
+    title="Fix the growth bottleneck, not just the symptom"
+    subtitle="Each engagement starts with the commercial goal, then works backward into positioning, channels, content, and conversion."
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Positioning and messaging',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
+          'Translate your expertise into a sharper market position, clearer service offers, and language buyers understand quickly.',
+        icon: 'tabler:target-arrow',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Go-to-market planning',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
+          'Define the right audience, channel mix, campaign priorities, budget assumptions, and operating cadence before spend scales.',
+        icon: 'tabler:route',
       },
       {
-        title: 'Best Practices',
+        title: 'Website conversion review',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
+          'Audit key pages, calls to action, proof points, and buyer flow so more qualified visitors know what to do next.',
+        icon: 'tabler:cursor-text',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Content strategy',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
+          'Create an editorial system that answers real buyer questions and supports sales conversations instead of chasing empty volume.',
+        icon: 'tabler:article',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'Lead generation campaigns',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
+          'Plan focused campaigns for LinkedIn, email, search, partner channels, or events with clean handoff into sales follow-up.',
+        icon: 'tabler:speakerphone',
       },
       {
-        title: 'Open to new ideas and contributions',
+        title: 'Marketing operations',
         description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
+          'Simplify tracking, campaign reporting, and weekly decision-making so the team can see what is working and what needs attention.',
+        icon: 'tabler:chart-dots-3',
       },
     ]}
   />
 
-  <!-- Content Widget **************** -->
-
   <Content
+    id="approach"
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    tagline="Approach"
+    title="Strategy first, execution close behind"
     items={[
       {
-        title: 'Built on top of Astro 5.0',
+        title: 'Diagnose the real constraint',
         description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+          'Review your current funnel, sales cycle, audience, offer, analytics, and content before prescribing channels.',
       },
       {
-        title: 'Styled using Tailwind CSS',
+        title: 'Prioritize the moves that matter',
         description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+          'Choose a small set of high-leverage improvements instead of spreading budget and attention across every tactic.',
       },
       {
-        title: 'Cross-browser compatibility',
+        title: 'Leave with an operating plan',
         description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+          'Turn the strategy into owners, timelines, messages, campaign briefs, measurement, and next-best actions.',
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
-    }}
+    image={`<img class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1740&q=80" alt="Consulting workshop with strategy notes on a whiteboard" loading="lazy" />`}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">No tactic theater</h3>
+      Campaigns only work when the offer, message, audience, proof, and follow-up are aligned.
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-primary/10 dark:bg-transparent"></div>
     </Fragment>
   </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
-      },
-      {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
-      },
-      {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
-  >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    id="process"
+    title="A practical consulting process"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
+        title: 'Step 1: <span class="font-medium">Audit</span>',
         description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
+          'Map the current customer journey, review performance signals, interview stakeholders, and identify where qualified demand is leaking.',
+        icon: 'tabler:search',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
+        title: 'Step 2: <span class="font-medium">Position</span>',
         description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
+          'Clarify the ideal buyer, core problem, commercial offer, value proposition, proof points, and objection handling.',
+        icon: 'tabler:message-2-star',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        title: 'Step 3: <span class="font-medium">Plan</span>',
         description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
+          'Build a realistic campaign roadmap with content themes, channel roles, conversion paths, owners, and measurement.',
+        icon: 'tabler:calendar-stats',
       },
       {
-        title: 'Ready!',
-        icon: 'tabler:check',
+        title: 'Step 4: <span class="font-medium">Improve</span>',
+        description:
+          'Review results, tighten weak points, and turn learning into the next round of decisions.',
+        icon: 'tabler:chart-line',
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
+    image={`<img class="object-cover object-top w-full rounded-md shadow-lg md:h-full" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=987&q=80" alt="Marketing planning session with charts and notes" loading="lazy" />`}
   />
 
-  <!-- Features2 Widget ************** -->
-
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
+    title="What improves first"
+    subtitle="The first wins usually come from clearer choices, sharper copy, and fewer disconnected activities."
+    tagline="Outcomes"
     items={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
+        title: 'A sharper service narrative',
+        description: 'Buyers can tell who you help, what problem you solve, and why your approach is different.',
         icon: 'flat-color-icons:voice-presentation',
       },
       {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
+        title: 'Better-fit inquiries',
+        description: 'Landing pages and calls to action filter interest toward conversations your team wants to have.',
         icon: 'flat-color-icons:business-contact',
       },
       {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
+        title: 'Campaigns with purpose',
+        description: 'Every channel has a job, a message, a conversion path, and a simple measure of success.',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: 'Sales-ready content',
+        description: 'Insights, case stories, and explainers help prospects understand the cost of inaction.',
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Cleaner reporting',
+        description: 'Track leading indicators and sales impact without building a dashboard no one uses.',
+        icon: 'flat-color-icons:statistics',
+      },
+      {
+        title: 'A calmer marketing cadence',
+        description: 'Weekly priorities become easier because the team knows what matters and what can wait.',
+        icon: 'flat-color-icons:approval',
       },
     ]}
   >
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-primary/10 dark:bg-transparent"></div>
     </Fragment>
   </Features2>
 
-  <!-- HighlightedPosts Widget ******* -->
-
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
+  <Stats
+    stats={[
+      { title: 'Strategy sprints', amount: '90-day' },
+      { title: 'Core offers clarified', amount: '3-5' },
+      { title: 'Decision cadence', amount: 'Weekly' },
+      { title: 'Primary owner', amount: '1' },
+    ]}
   />
 
-  <!-- FAQs Widget ******************* -->
-
   <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    title="Frequently asked questions"
+    subtitle="Quick answers for teams considering a marketing strategy engagement."
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why AstroWind?',
+        title: 'Who is this consulting best for?',
         description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+          'B2B service businesses, consultants, agencies, and expert-led firms that have strong expertise but need clearer positioning, more qualified inquiries, or a more disciplined marketing plan.',
       },
       {
-        title: 'What do I need to start?',
+        title: 'Do you execute campaigns or only advise?',
         description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+          'Engagements can include campaign planning, copy direction, content briefs, conversion reviews, and implementation support. The goal is to make execution easier for your team or partners.',
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: 'How soon can we see useful output?',
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          'Most strategy sprints produce clear messaging, priority recommendations, and a practical 90-day plan within the first few weeks.',
       },
       {
-        title: "What's something that you don't understand?",
+        title: 'Can you work with our existing agency or freelancer?',
         description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+          'Yes. The work is designed to improve focus and handoff so internal teams, agencies, and freelancers can execute from a clearer brief.',
       },
       {
-        title: 'What is something that you would like to try again?',
+        title: 'What do we need before starting?',
         description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+          'Access to current website data, sales context, recent campaigns, customer insights, and a small stakeholder group that can make decisions.',
       },
       {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        title: 'Is this right if we are not ready to spend on ads?',
         description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+          'Yes. Positioning, messaging, website conversion, and sales-support content often need to be fixed before paid campaigns can perform well.',
       },
     ]}
   />
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  />
-
-  <!-- CallToAction Widget *********** -->
 
   <CallToAction
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
+        text: 'Book a strategy call',
+        href: '/contact',
+        icon: 'tabler:calendar-check',
       },
     ]}
   >
-    <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
+    <Fragment slot="title">Ready to make marketing easier to buy?</Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Bring the current challenge. Leave the first call with a clearer view of what to fix next.
     </Fragment>
   </CallToAction>
 </Layout>

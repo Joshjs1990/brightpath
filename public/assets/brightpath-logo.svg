@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 120" role="img" aria-labelledby="title desc">
+  <title id="title">BrightPath Marketing logo</title>
+  <desc id="desc">Angular red path mark with BrightPath Marketing wordmark.</desc>
+  <rect width="560" height="120" fill="none"/>
+  <g fill="#090908">
+    <path d="M22 14h78v20H42v52h20V54h38v20H82v32H22z"/>
+    <path d="M111 14h26v92h-26z"/>
+    <path d="M111 14h78v20h-52v16h42v20h-42v16h52v20h-78z" opacity=".36"/>
+    <path d="M197 14h68v20h-48v16h40v20h-40v36h-20z"/>
+  </g>
+  <g fill="#090908">
+    <path d="M303.3 38.8c0 10.4-7.7 17.4-20.8 17.4h-17.2V21.8h17.1c12.9 0 20.9 6.8 20.9 17zm-14.6.1c0-4.7-3.1-7.4-8.4-7.4h-2.2v15h2.2c5.4 0 8.4-2.8 8.4-7.6z"/>
+    <path d="M313.9 21.8h12.8v34.4h-12.8z"/>
+    <path d="M337.7 21.8h30.1v9.7h-17.3V35h15.4v8.9h-15.4v12.3h-12.8z"/>
+    <path d="M376.9 21.8H407v9.7h-17.3V35h15.4v8.9h-15.4v12.3h-12.8z"/>
+    <path d="M416.1 21.8H429v24.5h17.2v9.9h-30.1z"/>
+    <path d="M454.8 21.8h12.8v34.4h-12.8z"/>
+    <path d="M477.2 21.8h13l12 17.2V21.8h12.3v34.4h-12.7l-12.3-17.8v17.8h-12.3z"/>
+    <path d="M264.9 75.2h12.5l9.2 15.1 9.2-15.1h12.5v34.4h-12.5V94.2l-6.2 10h-6.1l-6.2-10v15.4h-12.4z"/>
+    <path d="M318.7 75.2h12.8v34.4h-12.8z"/>
+    <path d="M341.1 75.2h13l12 17.2V75.2h12.3v34.4h-12.7l-12.3-17.8v17.8h-12.3z"/>
+    <path d="M386.7 92.4c0-10.5 8.2-18 19.8-18 6 0 11.1 2 14.5 5.1l-7.1 7.7c-1.7-1.4-3.9-2.4-7.1-2.4-4.5 0-7.4 3.1-7.4 7.6s3 7.8 7.9 7.8c1.6 0 2.9-.2 4-.6V96h-6.5v-7.7h18.2v16.3c-3.9 3.5-9.2 5.8-16.3 5.8-11.9 0-20-7.4-20-18z"/>
+  </g>
+</svg>
