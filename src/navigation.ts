@@ -65,10 +65,7 @@ export const footerData = {
     { text: 'Terms', href: getPermalink('/terms') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
-  socialLinks: [
-    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: '#' },
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-  ],
+  socialLinks: [],
   footNote: `
     © ${new Date().getFullYear()} BrightPath Marketing. Independent marketing strategy consulting.
   `,

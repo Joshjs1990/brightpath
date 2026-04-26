@@ -595,6 +595,24 @@ section.relative.md\:-mt-\[76px\] img {
   color: rgb(244 239 228 / 0.62);
 }
 
+.text-gray-800,
+.prose {
+  color: rgb(244 239 228 / 0.82) !important;
+}
+
+.prose :where(h1, h2, h3, h4, h5, h6, strong, b):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  color: #f4efe4 !important;
+}
+
+.prose :where(p, li, blockquote, td, th, figcaption):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  color: rgb(244 239 228 / 0.78) !important;
+}
+
+.prose :where(a):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  color: #ffffff !important;
+  text-decoration-color: rgb(255 59 31 / 0.75);
+}
+
 .hover\:text-white:hover {
   color: #ffffff !important;
 }
